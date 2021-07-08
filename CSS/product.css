@@ -1,0 +1,373 @@
+html, body{
+    padding: 0%;
+    margin: 0%;
+    width: 100%;
+    height: 100%;
+}
+@font-face {
+    font-family: "BMHANNAAir";
+    src: url(font/BMDOHYEON_ttf.ttf);
+}
+@media only screen and (max-width: 980px) {
+    #labelcheckbox{
+        width : 35px;
+        height: 35px;
+    }
+    }
+.header{
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    /* margin-bottom: 5%; */
+    height: 15%;
+}
+.header-l{
+    float: left;
+    width: 20%;
+}
+.logo{
+    width:100%;
+    height: 100%;
+}
+.logo>img{
+    width: 160px;
+    height: 160px;
+}
+.header-r{
+    float: right;
+    height: 100%;
+    width: 80%;
+    padding-top: 25px;
+}
+.navbar{
+    float: right;
+}
+.navbar>li{
+    float: right;            
+    list-style: none;
+    margin-top: 10px;
+}
+.navbar>li>a:hover{
+    color : gold;
+}
+.navbar a{
+    /* line-height: 50px; */
+    color:black;
+    padding: 0 25px 0 0;
+    /* display: block; */
+    text-decoration: none;
+}
+/* nav바 */
+.hr_checkbox{
+    display: none;
+    float: right;
+}
+@media only screen and (max-width: 1023px) {
+    html, body{
+        padding: 0%;
+        margin: 0%;
+        width: 100%;
+        height: 100%;
+    }
+    .slid>*{
+        max-width: none;
+    }
+    .header-r{
+        display: none;
+    }
+    .hr_checkbox{
+        display: inherit;
+    }
+    #slid{
+        float: left;
+        width: 100%;
+        height: 50%;
+        text-align: center;
+        /* margin-left: 200px; */
+        /* max-width: 550px; */
+    }
+    .slid>*{
+        max-width: 7000px;
+    }
+    #mid_explain{
+        text-align: center;
+        width: 100%;
+        height: 50%;
+    }
+    #but{
+        width: 100%;
+    }
+    .company{
+        margin-top: 250px;
+    }
+    .logo{
+        width : 100%;
+        float : left;
+    }
+    #logoimg{
+        width : 150px;
+        height: 150px;
+    }
+}
+
+input[id="menuicon"] {
+    display:none;
+}
+input[id="menuicon"] + label {
+    display:block;
+    margin:30px;
+    width:60px;
+    height:50px;
+    position:relative;
+    cursor:pointer;
+}
+input[id="menuicon"] + label span {
+    display:block;
+    position:absolute;
+    width:100%;
+    height:5px;
+    border-radius:30px;
+    background:#000;
+    transition:all .35s;
+}
+input[id="menuicon"] + label span:nth-child(1) {
+    top:0;
+}
+input[id="menuicon"] + label span:nth-child(2) {
+    top:50%;
+    transform:translateY(-50%);
+}
+input[id="menuicon"] + label span:nth-child(3) {
+    bottom:0;
+}
+input[id="menuicon"]:checked + label {
+    z-index:2;
+}
+input[id="menuicon"]:checked + label span {
+    background:#fff;
+}
+input[id="menuicon"]:checked + label span:nth-child(1) {
+    top:50%;
+    transform:translateY(-50%)rotate(45deg);
+}
+input[id="menuicon"]:checked + label span:nth-child(2) {
+    opacity:0;
+}
+input[id="menuicon"]:checked + label span:nth-child(3) {
+    bottom:50%;
+    transform:translateY(50%) rotate(-45deg);
+}
+div[class="sidebar"] {
+    width:300px;
+    height:100%;
+    background:#F9D142;
+    position:fixed;
+    top:0;
+    right:-300px;
+    z-index:1;
+    transition:all .35s;
+}
+input[id="menuicon"]:checked + label + div {
+    right:0;
+}
+.sidemenu>a{
+    color : white;
+    text-decoration: none;
+}
+.sidemenu{
+    width: 100%;
+    position: relative;
+    top:300px;
+    left: 100px;
+}
+/*  */
+/*  */
+/*  */
+.exp{
+    font-family: "BMHANNAAir";
+}
+
+#app{
+height: auto;
+min-height: 100%;
+position: relative;
+}
+.header-contents{
+padding-top : 180px;
+width : 100%;
+height: 100%;
+box-sizing: border-box;
+background-position: 50% 50%;
+background-size: cover;
+background-image: url(../media/product1.jpg);
+}
+.exp{
+margin: 0 auto;
+width : 1024px;
+padding : 0 50px 130px;
+}
+h1{
+font-size : 36px;
+line-height: 42px;
+color : #000;
+}
+/*  */
+/*  */
+/*  */
+#main{
+padding-bottom: 60px;
+}
+.wrapper{
+box-sizing: border-box;
+margin : 0 auto;
+width : 1300px;
+padding : 0 50px;
+}
+.product-item{
+text-align: center;
+}
+/* ul{
+list-style: none;
+} */
+.product-item>li{
+display: inline-block;
+vertical-align: top;
+width : 452px;
+margin-top: 60px;
+margin-right: 15px;
+text-align: left;
+}
+a{
+text-decoration: none;
+color : inherit;
+}
+#href{
+text-decoration: none;
+color : inherit;
+}
+#img{
+position: relative;
+width: 100%;
+padding : 30px 30px 30px 30px;
+border-radius: 8px;
+box-sizing: border-box;
+background-position: right 20px top 20px;
+background-repeat: no-repeat;
+background-size: 130px;
+}
+.pd-header{
+height: 130px;
+}
+h2{
+padding-right: 130px;
+margin-top: 8px;
+font-size: 26px;
+/* font-style: italic; */
+}
+.contents{
+display: table;
+width : 100%;
+height: 72px;
+}
+.contents>ul{
+display : table-cell;
+width : 250px;
+/* display: list-item; */
+}
+.contents>ul li{
+position: relative;
+/* padding-left: 1px; */
+font-size: 17px;
+line-height: 24px;
+font-weight: 500;
+}
+.contents>div{
+display: table-cell;
+width :auto;
+text-align: right;
+}
+.contents>div>span{
+display: block;
+font-size: 14px;
+font-weight: 700;
+}
+.contents>div>p{
+/* display: block; */
+font-size: 20px;
+font-weight: 700;
+}
+.footer{
+margin-top: 14px;
+}
+.footer>.btn-wrap{
+margin-top: 35px;
+text-align: center;
+}
+#button{
+width : 295px;
+/* background-color: #ddd; */
+border-radius: 30px;
+}
+.product-item>li:nth-child(2n){
+margin-right: 0;
+}
+.pd-header>h2 em{
+display: block;
+/* font-style: normal; */
+font-size : 17px;
+}
+@media only screen and (max-width: 1023px) {
+/* .header-contents{
+padding-top : 150px;
+}
+.exp{
+width : 100%;
+padding : 0 20px 90px;
+}
+h1{
+font-size: 30px;
+width : 100%;
+} */
+/* .wrapper{
+width : 100%;
+padding : 0 10px;
+}
+.product-item>li{
+width : 100%;
+max-width: 452px;
+margin-top : 20px;
+margin-right: 10px;
+}
+#img{
+padding : 30px 20px 30px 20px;
+background-position: right 10px top 20px;
+} */
+}
+@media only screen and (max-width: 1170px) {
+.header-contents{
+padding-top : 150px;
+}
+.exp{
+width : 100%;
+padding : 0 20px 90px;
+}
+h1{
+font-size: 30px;
+width : 100%;
+margin-top : 15px;
+}
+.wrapper{
+width : 100%;
+padding : 0 10px;
+}
+.product-item>li{
+width : 100%;
+max-width: 452px;
+margin-top : 20px;
+margin-right: 10px;
+}
+#img{
+padding : 30px 20px 30px 20px;
+background-position: right 10px top 20px;
+}
+}

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="kor">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>장바구니 | U DOG</title>
+    <script src="JS/cart.js"></script>
+    <link rel='stylesheet' href="CSS/cart.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+</head>
+<body onload="get_value(), check_value(), display_cart()" id="body">
+    <div class="header" style="font-family: BMHANNAAir;">
+        <section class="header-l">
+            <a  class="logo" href="index.html"><img id="logoimg" src="media/logo.png"></a>
+        </section>
+        <section class="header-r">
+            <nav class = "navbar">
+                <li><a href="index.html">메인페이지</a></li>
+                <li><a href="survey.html">추천상품</a></li>
+                <li><a href="cart.html">장바구니</a></li>
+                <li><a href="product.html">제품보기</a></li>
+                <li><a href="login.html">로그인</a></li>
+            </nav>
+        </section>
+        <div class="hr_checkbox">
+            <input type="checkbox" id="menuicon">
+            <label id="labelcheckbox" for="menuicon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+                <div class="sidebar">
+                    <nav class="sidemenu">
+                        <a href="index.html">메인페이지</a><br>
+                        <a href="survey.html">추천상품</a><br>
+                        <a href="cart.html">장바구니</a><br>
+                        <a href="product.html">제품보기</a><br>
+                        <a href="login.html">로그인</a><br>
+                    </nav>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="cart_main">
+        <div class="up" id="up">
+            <div>
+            <div class="up_ment">
+            <h1 style="font-family: BMHANNAAir;">장바구니</h1>
+            <h2 style="font-family: BMHANNAAir;">많은 것 가운데 홀로 두드러지게</h2>
+            </div>
+            <div class="delte_btn">
+              <a href="product.html"><button type="button" id="btn2" class="btn btn-outline-warning">제품 추가</button></a>
+            <a onclick="delete_cart()" href="cart.html"><img id="img22" src="media/delete.png" width="100px" height="100px"></a>
+            </div>
+        </div>
+        </div>
+
+        <!-- 제품이 하나도 없을 때 -->
+        <div class="middle" id="middle_ver1">
+            <img src="media/밥그릇.png" width="200px" height="200px">
+            <h2 style="font-family: BMHANNAAir;">장바구니에 추가된 제품이 없습니다.</h2>
+            <h3 style="font-family: BMHANNAAir;">몇가지 건강설문을 통해</h3>
+            <h3 style="font-family: BMHANNAAir;">나만을 위한 영양성분을 찾아보세요.</h3>
+            <a href="survey.html"><button type="button" class="btn btn-warning">설문시작</button></a>
+        </div>
+
+    
+        <div class="middle" id="middle_ver2" style="margin-top: 40px;">
+            <div class="cart_pro">
+                <a id="delete_img" onclick="delete_eye()" href="cart.html"><img src="media/cart_button.png" width="50px" height="50px"></a> 
+
+                <img id="productimg" src="media/food/eye.jpg" width="15%" height="100%">
+               
+                <ul id="proudct-list">
+                    <li>eye조아 육포</li>
+                    <li><button type="button" class="btn btn-outline-secondary" onclick="su_eye_cart()" style="width: 40px; height: 40px;">-</button></li>
+                    <li class="eye_cnt"></li>
+                    <li><button type="button" class="btn btn-outline-secondary" onclick="add_eye_cart()" style="width: 40px; height: 40px;">+</button></li>
+                    <li class="eye_price"></li>
+                </ul>
+                
+
+            </div>
+
+            <div class="cart_pro">
+                <a onclick="delete_jang()" href="cart.html"><img src="media/cart_button.png" width="50px" height="50px"></a>
+                <img id="productimg" src="media/food/jang.jpg" width="15%" height="100%">
+                
+                <ul id="proudct-list">
+                    <li>강아지 국내산 소세지</li>
+                    <li><button type="button" class="btn btn-outline-secondary" onclick="su_jang_cart()" style="width: 40px; height: 40px;">-</button></li>
+                    <li class="jang_cnt"></li>
+                    <li><button type="button" class="btn btn-outline-secondary" onclick="add_jang_cart()" style="width: 40px; height: 40px;">+</button></li>
+                    <li class="jang_price"></li>
+                </ul>
+   
+            </div>
+
+
+            <div class="cart_pro">
+                <a onclick="delete_born()" href="cart.html"><img src="media/cart_button.png" width="50px" height="50px"></a>
+                <img id="productimg" src="media/food/born.jpg" width="15%" height="100%">
+                
+                <ul id="proudct-list">
+                    <li>부드러운 소고기</li>
+                    <li><button type="button" class="btn btn-outline-secondary" onclick="su_born_cart()" style="width: 40px; height: 40px;">-</button></li>
+                    <li class="born_cnt"></li>
+                    <li><button type="button" class="btn btn-outline-secondary" onclick="add_born_cart()" style="width: 40px; height: 40px;">+</button></li>
+                    <li class="born_price"></li>
+                </ul>
+                
+            </div>
+
+
+            <div class="cart_pro">
+                <a onclick="delete_tooth()" href="cart.html"><img src="media/cart_button.png" width="50px" height="50px"></a>
+                <img id="productimg" src="media/food/tooth.jpg" width="15%" height="100%">
+                
+                <ul id="proudct-list">
+                    <li>일석이조 강아지 껌</li>
+                    <li><button type="button" class="btn btn-outline-secondary" onclick="su_tooth_cart()" style="width: 40px; height: 40px;">-</button></li>
+                    <li class="tooth_cnt"></li>
+                    <li><button type="button" class="btn btn-outline-secondary" onclick="add_tooth_cart()" style="width: 40px; height: 40px;">+</button></li>
+                    <li class="tooth_price"></li>
+                </ul>
+              
+            </div>
+            <div class="cart_pro">
+                <a onclick="delete_skin()" href="cart.html"><img src="media/cart_button.png" width="50px" height="50px"></a>
+                <img id="productimg" src="media/food/skin.jpg" width="15%" height="100%">
+                <ul id="proudct-list">
+                    <li>뽀송이 치킨</li>
+                    <li><button type="button" class="btn btn-outline-secondary" onclick="su_skin_cart()" style="width: 40px; height: 40px;">-</button></li>
+                    <li class="skin_cnt"></li>
+                    <li><button type="button" class="btn btn-outline-secondary" onclick="add_skin_cart()" style="width: 40px; height: 40px;">+</button></li>
+                    <li class="skin_price"></li>
+                </ul>
+
+                
+            </div>
+            <div class="cart_pro">
+                <a onclick="delete_heart()" href="cart.html"><img src="media/cart_button.png" width="50px" height="50px"></a>
+                <img id="productimg" src="media/food/heart.jpg" width="15%" height="100%">
+                <ul id="proudct-list">
+                    <li>영양 공급 육포</li>
+                    <li><button type="button" class="btn btn-outline-secondary" onclick="su_heart_cart()" style="width: 40px; height: 40px;">-</button></li>
+                    <li class="heart_cnt"></li>
+                    <li><button type="button" class="btn btn-outline-secondary" onclick="add_heart_cart()" style="width: 40px; height: 40px;">+</button></li>
+                    <li class="heart_price"></li>
+                </ul>
+         
+                
+                
+            </div>
+            <div class="cart_pro">
+                <a onclick="delete_standard()" href="cart.html"><img src="media/cart_button.png" width="50px" height="50px"></a>
+                <img id="productimg" src="media/food/standard.png" width="15%" height="100%">
+                <ul id="proudct-list">
+                    <li>스틱형 육포</li>
+                    <li><button type="button" class="btn btn-outline-secondary" onclick="su_standard_cart()" style="width: 40px; height: 40px;">-</button></li>
+                    <li class="standard_cnt"></li>
+                    <li><button type="button" class="btn btn-outline-secondary" onclick="add_standard_cart()" style="width: 40px; height: 40px;">+</button></li>
+                    <li class="standard_price"></li>
+                </ul>
+                
+                
+            </div>
+            <div class="cart_pro">
+                <a onclick="delete_standard2()" href="cart.html"><img src="media/cart_button.png" width="50px" height="50px"></a>
+                <img id="productimg" src="media/food/standard2.jpg" width="15%" height="100%">
+                <ul id="proudct-list">
+                    <li>단호박 + 육포</li>
+                    <li><button type="button" class="btn btn-outline-secondary" onclick="su_standard2_cart()" style="width: 40px; height: 40px;">-</button></li>
+                    <li class="standard2_cnt"></li>
+                    <li><button type="button" class="btn btn-outline-secondary" onclick="add_standard2_cart()" style="width: 40px; height: 40px;">+</button></li>
+                    <li class="standard2_price"></li>
+                </ul>
+                
+            </div>
+
+            <div class="total1">
+                <div class="cart_price">
+                    <dl class="clearfix">
+                        <dt>제품합계</dt>
+                        <dd class="total"></dd>
+                        <dt>배송비</dt>
+                        <dd id="free">2,500원</dd>
+                    </dl>
+                </div>
+            </div>
+
+            <div class="foot">
+                <dl class=clearfix>
+                    <dt id="totalprice">총 결제금액</dt>
+                    <dd id="totalprice1" class="total"></dd>
+                </dl>
+                <div class="buy_button">
+                    <button type="button" id="buy_btn" class="btn btn-warning" onclick="buy_clik()">구매하기</button>
+                </div>
+            </div>
+        </div>
+   
+    
+
+    
+
+    </div>
+    <div height="500px">
+        &nbsp;
+    </div>
+
+</body>
+</html>

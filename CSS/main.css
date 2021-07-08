@@ -1,0 +1,292 @@
+html, body{
+    padding: 0%;
+    margin: 0%;
+    width: 100%;
+    height: 100%;
+}
+@font-face {
+    font-family: "BMHANNAAir";
+    src: url(font/BMDOHYEON_ttf.ttf);
+}
+.header{
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 5%;
+    height: 15%;
+}
+.header-l{
+    float: left;
+    width: 20%;
+}
+.logo{
+    width:100%;
+    height: 100%;
+}
+.header-l>a>img{
+    width: 200px;
+    height: 200px;
+}
+.header-r{
+    float: right;
+    height: 100%;
+    width: 80%;
+    padding-top: 25px;
+}
+.navbar{
+    float: right;
+}
+.navbar>li{
+    float: right;            
+    list-style: none;
+    margin-top: 10px;
+}
+.navbar a{
+    /* line-height: 50px; */
+    color:black;
+    padding: 0 25px 0 0;
+    /* display: block; */
+    text-decoration: none;
+}
+/* nav바 */
+.hr_checkbox{
+    display: none;
+    float: right;
+    margin-top: 28px;
+}
+@media only screen and (max-width: 1264px) {
+    html, body{
+    padding: 0%;
+    margin: 0%;
+    width: 100%;
+    height: 100%;
+    }
+    .slid>*{
+        max-width: none;
+        margin: 0 auto;;
+
+    }
+    .header-r{
+        display: none;
+    }
+    .hr_checkbox{
+        display: inherit;
+    }
+    #slid{
+        float: left;
+        width: 100%;
+        height: 50%;
+        text-align: center;
+        /* margin-left: 200px; */
+        /* max-width: 550px; */
+    }
+    .slid>*{
+        max-width: 7000px;
+    }
+    #mid_explain{
+        text-align: center;
+        width: 100%;
+        height: 50%;
+    }
+    #but{
+        width: 100%;
+    }
+    .company{
+        margin-top: 250px;
+    }
+    .footer{
+        text-align: center;
+    }
+    #footer_l{
+        float: left;
+        width: 100%;
+    }
+    #footer_r{
+        padding-top: 20px;
+        float: left;
+        width: 100%;
+        padding-bottom: 20px;
+    }
+}
+@media only screen and (max-width: 1100px) {
+    #intro_1{
+        float: left;
+        width: 100%;
+        text-align: center;
+    }
+    .slid>*{
+        width: 700px;
+        max-width: none;
+        margin: 0 auto;;
+    }
+    #intro_2{
+        float: left;
+        width: 100%;
+        text-align: center;
+    }
+    #intro_3{
+        float: left;
+        width: 100%;
+        text-align: center;
+    }
+    .footer{
+        margin-top:50px;
+    }
+}
+@media only screen and (max-width: 800px) {
+    #body{
+        width: 1000px;
+    }
+}
+@media only screen and (max-width: 374px) {
+    html, #body{
+        width: 375px !important;
+    }
+}
+
+input[id="menuicon"] {
+    display:none;
+}
+input[id="menuicon"] + label {
+    display:block;
+    margin:30px;
+    width:60px;
+    height:50px;
+    position:relative;
+    cursor:pointer;
+}
+input[id="menuicon"] + label span {
+    display:block;
+    position:absolute;
+    width:100%;
+    height:5px;
+    border-radius:30px;
+    background:#000;
+    transition:all .35s;
+}
+input[id="menuicon"] + label span:nth-child(1) {
+    top:0;
+}
+input[id="menuicon"] + label span:nth-child(2) {
+    top:50%;
+    transform:translateY(-50%);
+}
+input[id="menuicon"] + label span:nth-child(3) {
+    bottom:0;
+}
+input[id="menuicon"]:checked + label {
+    z-index:2;
+}
+input[id="menuicon"]:checked + label span {
+    background:#fff;
+}
+input[id="menuicon"]:checked + label span:nth-child(1) {
+    top:50%;
+    transform:translateY(-50%)rotate(45deg);
+}
+input[id="menuicon"]:checked + label span:nth-child(2) {
+    opacity:0;
+}
+input[id="menuicon"]:checked + label span:nth-child(3) {
+    bottom:50%;
+    transform:translateY(50%) rotate(-45deg);
+}
+div[class="sidebar"] {
+    width:300px;
+    height:100%;
+    background:#F9D142;
+    position:fixed;
+    top:0;
+    right:-300px;
+    z-index:1;
+    transition:all .35s;
+}
+input[id="menuicon"]:checked + label + div {
+    right:0;}
+.sidemenu>a{
+    color : white;
+    text-decoration: none;
+}
+.navbar>li>a:hover{
+    color : gold;
+}
+.sidemenu{
+    width: 100%;
+    position: relative;
+    top:300px;
+    left: 100px;
+}
+#but{   /*버튼*/
+    width:80%;
+    height:20%;
+    font-size: 4vh;
+    margin-top: 30px;
+    min-width: 235px;
+}
+.mid{
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    height: 70%;
+}
+.company{
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    height: 40%;
+}
+#carousel-inner{
+    max-height: 100px;
+    max-width: 100px;
+}
+.mid_explain{
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+.slid{
+    width: 50%;
+    height: 100%;
+    max-height: 150px;
+    float: left;
+}        
+.slid>*{
+    max-width: 550px;
+}
+#carouselExampleDark{
+    float: left;
+}
+.mid_explain>h2{
+    font-size: 40px;
+}
+.mid_explain>a>button{
+    width: 70%;
+    height: 15%;
+}
+.intro_1{
+    float: left;
+    width: 33%;
+}
+.intro_2{
+    float: left;
+    width: 33%;
+}
+.intro_3{
+    float: left;
+    width: 33%;
+}
+.footer{
+    /* background-color: #F9D142; */
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    height: 20%;
+}
+.footer_l{
+    width: 50%;
+    float: left;
+}
+.footer_r{
+    width: 50%;
+    float: left;
+}

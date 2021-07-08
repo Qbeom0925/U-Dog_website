@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구매페이지 | 강아지 맞춤간식 유독</title>
+</head>
+<link rel="stylesheet" href="css/sign.css">
+<link rel="stylesheet" href="css/cart.css">
+
+
+
+<script src="JS/buy.js"></script>
+
+<body onload="get_value(), display_cart()">
+    <div class="header" style="font-family: BMHANNAAir;">
+        <section class="header-l">
+            <a  class="logo" href="index.html"><img id="logoimg" src="media/logo.png"></a>
+        </section>
+        <section class="header-r">
+            <nav class = "navbar">
+                <li><a href="login.html">로그인</a></li>
+                <li><a href="product.html">제품보기</a></li>
+                <li><a href="cart.html">장바구니</a></li>
+                <li><a href="survey.html">추천상품</a></li>
+                <li><a href="index.html">메인페이지</a></li>
+            </nav>
+        </section>
+        <div class="hr_checkbox">
+            <input type="checkbox" id="menuicon">
+            <label id="labelcheckbox" for="menuicon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+                <div class="sidebar">
+                    <nav class="sidemenu">
+                        <a href="index.html">메인페이지</a><br>
+                        <a href="survey.html">추천상품</a><br>
+                        <a href="cart.html">장바구니</a><br>
+                        <a href="product.html">제품보기</a><br>
+                        <a href="login.html">로그인</a><br>
+                    </nav>
+            </div>
+        </div>
+    </div>
+    <section id=sign-view>
+        <div>
+            <fieldset class="userif">
+                    <h2 class="title">구매페이지</h2>
+                    <div>
+                        <div class="input-label">
+                            <label>이름</label>
+                            <input type="text" id="name" name="name" class="input-text" placeholder="이름을 입력하세요">
+                        </div>
+                        <div class="input-label">
+                            <label>핸드폰 번호</label>
+                            <input type="text" id="name" name="name" class="input-text" placeholder="연락처('-'제외)를 입력해 주세요. ex) 01012345678">
+                        </div>
+                        <div class="input-label">
+                            <label>배송시 요청사항</label>
+                            <select name="job">
+                                <option value="">부재시 전화나 문자 남겨주세요</option>
+                                <option value="">배송전 미리 연락바랍니다</option>
+                                <option value="">부재시 경비실에 맡겨주세요</option>
+                                <option value="">문앞에 놓아주세요</option>
+                            </select>
+                        </div>
+                    </div>
+                </fieldset>
+                <br>
+
+                <br>
+                <fieldset class="joinif">
+                    <div class="input-label">
+                        <label>주소</label>
+                        <input type="text" id="loginid" name="id" class="input-text" placeholder="주소를 입력해 주세요.">
+                    </div>
+                    <div class="input-label label-bottom">
+                        <label>상세주소</label>
+                        <input type="text" id="loginid" name="id" class="input-text" placeholder="상세주소를 입력해 주세요.">
+                    </div>
+                </fieldset>
+
+                <section class="product_section">
+                    <div class="cart_pro">        
+                        <img id="productimg" src="media/food/eye.jpg" width="15%" height="100%">
+                       
+                        <ul id="proudct-list">
+                            <li>제품명: eye조아 육포</li>
+                            <li class="eye_cnt"></li>
+                            <br>
+                            <br>
+                            <li class="eye_price"></li>
+                        </ul>
+                        
+        
+                    </div>
+        
+                    <div class="cart_pro">
+                        <img id="productimg" src="media/food/jang.jpg" width="15%" height="100%">
+                        
+                        <ul id="proudct-list">
+                            <li>제품명: 강아지 국내산 소세지</li>
+                            <li class="jang_cnt"></li>
+                            <br>
+                            <br>
+                            <li class="jang_price"></li>
+                        </ul>
+           
+                    </div>
+        
+        
+                    <div class="cart_pro">
+                        <img id="productimg" src="media/food/born.jpg" width="15%" height="100%">
+                        
+                        <ul id="proudct-list">
+                            <li>제품명: 부드러운 소고기</li>
+                            <li class="born_cnt"></li>
+                            <br>
+                            <br>
+                            <li class="born_price"></li>
+                        </ul>
+                        
+                    </div>
+        
+        
+                    <div class="cart_pro">
+                        <img id="productimg" src="media/food/tooth.jpg" width="15%" height="100%">
+                        
+                        <ul id="proudct-list">
+                            <li>제품명: 일석이조 강아지 껌</li>
+                            <li class="tooth_cnt"></li>
+                            <br>
+                            <br>
+                            <li class="tooth_price"></li>
+                        </ul>
+                      
+                    </div>
+                    <div class="cart_pro">
+                        <img id="productimg" src="media/food/skin.jpg" width="15%" height="100%">
+                        <ul id="proudct-list">
+                            <li>제품명: 뽀송이 치킨</li>
+                            <li class="skin_cnt"></li>
+                            <br>
+                            <br>
+                            <li class="skin_price"></li>
+                        </ul>
+        
+                        
+                    </div>
+                    <div class="cart_pro">
+                        <img id="productimg" src="media/food/heart.jpg" width="15%" height="100%">
+                        <ul id="proudct-list">
+                            <li>제품명: 영양 공급 육포</li>
+                            <li class="heart_cnt"></li>
+                            <br>
+                            <br>
+                            <li class="heart_price"></li>
+                        </ul>
+                 
+                        
+                        
+                    </div>
+                    <div class="cart_pro">
+                        <img id="productimg" src="media/food/standard.png" width="15%" height="100%">
+                        <ul id="proudct-list">
+                            <li>제품명: 스틱형 육포</li>
+                            <li class="standard_cnt"></li>
+                            <br>
+                            <br>
+                            <li class="standard_price"></li>
+                        </ul>
+                    </div>
+                    <div class="cart_pro">
+                        <img id="productimg" src="media/food/standard2.jpg" width="15%" height="100%">
+                        <ul id="proudct-list">
+                            <li>제품명: 단호박 + 육포</li>
+                            <li class="standard2_cnt"></li>
+                            <br>
+                            <br>
+                            <li class="standard2_price"></li>
+                        </ul>
+                    </div>
+                    <h2>총합</h2>
+                    <div class="cart_total">
+                    </div>
+                    <br>
+                    <br>
+                    <div class="cart_total1">
+                    </div>
+                </section>
+
+
+                <br>
+                <br>
+                <div class="login-center">
+                    <a onclick="openPop()"><input type="submit" value="구매하기" class="btn1 btn-join"  style="margin-top: 40px;"></input></a>
+                </div>
+            </div>
+    </section>
+</body>
+</html>

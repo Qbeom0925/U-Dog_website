@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+      <!-- 부트스트랩 -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+         rel="stylesheet"
+         integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+         crossorigin="anonymous"/>
+
+      <title>품종확인 | U DOG</title>
+      <link rel="stylesheet" href="CSS/dog_face.css"/>
+      <script type="text/javascript" src="JS/dog_face.js"></script>
+   </head>
+
+   <body>
+      <div>
+         <div class="header" style="font-family: BMHANNAAir;">
+            <section class="header-l">
+               <a  class="logo" href="index.html"><img id="logoimg" src="media/logo.png"></a>
+            </section>
+            <section class="header-r">
+               <nav class = "navbar">
+                  <li><a href="index.html">메인페이지</a></li>
+                <li><a href="survey.html">추천상품</a></li>
+                <li><a href="cart.html">장바구니</a></li>
+                <li><a href="product.html">제품보기</a></li>
+                <li><a href="login.html">로그인</a></li>
+               </nav>
+            </section>
+            <div class="hr_checkbox">
+               <input type="checkbox" id="menuicon">
+               <label id="labelcheckbox" for="menuicon">
+                 <span></span>
+                 <span></span>
+                 <span></span>
+               </label>
+                 <div class="sidebar">
+                   <nav class="sidemenu">
+                     <a href="index.html">메인페이지</a><br>
+                     <a href="survey.html">추천상품</a><br>
+                     <a href="cart.html">장바구니</a><br>
+                     <a href="product.html">제품보기</a><br>
+                     <a href="login.html">로그인</a><br>
+                   </nav>
+               </div>
+            </div>
+         </div>
+   <!-- ------------------------------------------------------------------------------------------------ -->
+
+      <section class="section">
+         <h1 class="title">인공지능 강아지 품종 확인</h1>
+         <h2 class="subtitle">당신의 반려견의 종은?</h2>
+      </section>
+   </div>
+      <!-- ------------------------------------------------------------------------------------------------ -->
+
+      
+      
+      <div class="container file-upload">
+         <div class="image-upload-wrap">
+            <input
+               class="file-upload-input"
+               type="file"
+               onchange="readURL(this);"
+               accept="image/*"/>
+
+            <div class="drag-text">
+               <img src="media/upload.svg"class="mt-5 pt-5 upload">
+               <h3 class="mb-5 pb-5 pt-4 upload-text">강아지 사진을 올려주세요!</h3>
+            </div>
+         </div>
+
+         <div class="file-upload-content">
+            <img class="file-upload-image" id="animal-image" src="#" alt="your image" />
+            <p class="result-Messege"></p>
+            <div id="label-container"></div>
+            <div class="image-title-wrap">
+               <button type="button" onclick="removeUpload(), reload()" class="remove-image">
+                  Remove <span class="image-title">Uploaded Image</span>
+               </button>
+            </div>
+         </div>
+      </div>
+
+      <div id="label-container"></div>
+      <div id="disqus_thread"></div>
+
+      <script>
+         function readURL(input) {
+         if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function (e) {
+               $('.image-upload-wrap').hide();
+               $('.file-upload-image').attr('src', e.target.result);
+               $('.file-upload-content').show();
+               $('.image-title').html(input.files[0].name);
+            };
+            reader.readAsDataURL(input.files[0]);
+            init().then(()=>{
+               // 여기서 결과를 도출
+               predict();
+            });
+            
+         } else {
+            removeUpload();
+         }
+         }
+         
+         function reload(){
+            window.location.reload();
+         }
+         
+         function removeUpload() {
+            $('.file-upload-input').replaceWith($('.file-upload-input').clone());
+            $('.file-upload-content').hide();
+            $('.image-upload-wrap').show();
+         }
+         
+         $('.image-upload-wrap').bind('dragover', function () {
+         $('.image-upload-wrap').addClass('image-dropping');
+         });
+         
+         $('.image-upload-wrap').bind('dragleave', function () {
+         $('.image-upload-wrap').removeClass('image-dropping');
+         });
+      </script>
+
+      <script   src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js"
+         integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj"
+         crossorigin="anonymous"></script>
+         
+      <!-- teachable머신으로 부터 받음 ------------------------------------------------------------------------------------------------ -->
+      <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+         
+   </body>
+</html>

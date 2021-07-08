@@ -1,0 +1,164 @@
+html, body{height: 100%;width: 100%;}
+    /* width : 80%
+       margin-left : 10%
+       margin-right : 10% 
+    
+     */
+     body{
+        line-height: 1.2;
+        word-break: keep-all;
+        color: #333; 
+     } 
+#login-view{
+    position : absolute;
+    width : 100%;
+    /* height: 100%; */
+    margin-top : 100px;
+}
+#login-view>div{
+    display : table;
+    width : 100%;
+    height: 100%;
+}
+.login-view-inner{
+    display : table-cell;
+    text-align: center;
+    vertical-align: middle;
+    /* margin-top : 50 */
+}
+h1{
+    display : block;
+}
+form{
+    display : block;
+}
+.udog-login{
+    margin-top : 73px;
+}
+fieldset{
+    margin : 0 auto;
+    width : 458px;
+    /* vertical-align: baseline; */
+    border-width: 0;
+}
+.id{
+    border-color: white;
+    outline: none;
+}
+.id:hover{
+    border-color:rgb(252, 240, 176);
+}
+.password{
+    border-color: white;
+    outline: none;
+}
+.password:hover{
+    border-color:rgb(252, 240, 176);
+}
+input{
+    width : 100%;
+    height: 40px;
+    margin-bottom: 10px;
+}
+.inputtext{
+    font-size : 20px;
+    padding : 0 15px;
+    border-radius: 10px;
+    margin-top : 20px;
+}
+.loginbt{
+    width : 108%;
+    border-radius: 50px;
+    height: 50px;
+    background-color:rgb(252, 240, 176);
+    color : black;
+    border-color : white;
+}
+a{
+    text-decoration: none;
+    /* color : inherit; */
+    color : gray;
+}
+a:hover{
+    color :rgb(252, 240, 176);
+}
+nav{
+    letter-spacing: -1px;
+}
+/*  */
+/*  */
+/*  */
+/* 밑 필드셋 부분 */
+.kakao-login{
+    margin-top : 30px;
+    padding-top : 36px;
+    border-top : 1px solid rgba(1, 19, 108, 0.04);
+}
+.btn-kakao-login{
+    background-color: #ffcc00;
+    border:none;
+    color: rgba(51, 51, 51, 0.7);
+}
+.btn-facebook-login{
+    margin-top : 20px;
+    background-color: #4469b0;
+    border : none;
+    color : #fff;
+}
+.btn-naver-login{
+    margin-top : 20px;
+    background-color: #1ec800;
+    border : none;
+    color : #fff;
+}
+.btn{
+    width : 104%;
+    border-radius: 25px;
+    height: 50px;
+    font-size : 16px;
+    font-weight: 700;
+    text-align: center;
+    outline: none;
+    margin-left:2%;
+}
+/*  */
+/*  */
+/* 미디어쿼리 부분 */
+@media only screen and (max-width: 1023px){
+    /* html, body{height: 100%;width: 100%;} */
+    #login-view{
+        position: static;
+    }
+    .login-view-inner{
+        display: block;
+        padding-top : 58px;
+        padding-bottom: 30px;
+        /* vertical-align: top; */
+    }
+    .udog-login{
+        margin-top : 70px;
+    }
+    fieldset{
+        width:92%;
+    }
+    .inputtext{
+        padding : 0 16px;
+        height: 50px;
+        font-size : 16px;
+    }
+    .loginbt{
+        margin : 25px 0 18px;
+        width : 103%;
+    }
+    nav{
+        font-size: 14px;
+    }
+    /* .kakao-login{
+        width : 92%;
+    } */
+    #btn2{
+    width : 100%;
+    margin-left: 0px;
+    }
+    
+}

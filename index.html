@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <title>메인 | U DOG</title>
+    <link rel="stylesheet" href="CSS/index.css">
+    <script src="JS/index.js"></script>
+  
+</head>
+<body id="body" onload="fn_load()">
+    <div class="header" style="font-family: BMHANNAAir;">
+        <section class="header-l">
+            <a  class="logo" href="index.html"><img id="logoimg" src="media/logo.png"></a>
+        </section>
+        <section class="header-r">
+            <nav class = "navbar">
+                <li><a href="index.html">메인페이지</a></li>
+                <li><a href="survey.html">추천상품</a></li>
+                <li><a href="cart.html">장바구니</a></li>
+                <li><a href="product.html">제품보기</a></li>
+                <li class="loginbtn"><a href="login.html">로그인</a></li>
+                <li class="loginbtn"><a href="index.html">로그아웃</a></li>
+            </nav>
+        </section>
+        <div class="hr_checkbox">
+            <input type="checkbox" id="menuicon">
+            <label id="labelcheckbox" for="menuicon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+                <div class="sidebar">
+                    <nav class="sidemenu">
+                        <a href="index.html">메인페이지</a><br>
+                        <a href="survey.html">추천상품</a><br>
+                        <a href="cart.html">장바구니</a><br>
+                        <a href="product.html">제품보기</a><br>
+                        <a href="login.html">로그인</a><br>
+                    </nav>
+            </div>
+        </div>
+    </div>
+    <div class="main" style="font-family: BMHANNAAir;">
+        <section class="main_img">
+            <h2 id="exp4">반려동물 각각의 건강맞춤<br>
+            영양간식 설문</h2>
+            <a href="survey.html"><button id="sub_btn1" type="button" class="btn btn-outline-secondary">설문시작</button></a>
+        </section>
+        <section class="main_login" style="font-family: BMHANNAAir;">
+            <h3 >U Dog 최상의 서비스를 이용해보세요</h3>
+            <button id="login_btn" type="button" class="btn btn-warning" onclick="loginpage()">로그인</button>
+            <a class="main_link" href="pwfind.html"> <img src="media/key.png" width="15px" height="15px">비밀번호 찾기</a>
+            <a class="main_link" href="sign.html"> <img src="media/person.png" width="15px" height="15px">  회원가입</a>
+        </section>
+        <section class="main_login" style="font-family: BMHANNAAir;">
+            <h3 >U Dog 최상의 서비스를 이용해보세요</h3>
+            <button id="login_btn" type="button" class="btn btn-warning" onclick="shopmainpage()">로그아웃</button>
+            <a class="main_link" href="product.html"> <img src="media/product.png" width="20px" height="20px">제품보기</a>
+            <a class="main_link" href="cart.html"> <img src="media/cart.png" width="20px" height="20px">장바구니</a>
+        </section>
+    </div>
+
+    <div class="sub" style="font-family: BMHANNAAir;">
+        <section class="sub_pro">
+             <div class="sub_img"><img src="media/food/tooth.jpg" width="100%" height="150px"><button id="sub_btn" type="button" class="btn btn-warning" onclick="productpage()">제품 보기</button></div>
+             <div class="sub_img"><img src="media/food/dog-bones-350092_1920.jpg" width="100%" height="150px"><button id="sub_btn" type="button" class="btn btn-warning" onclick="productpage()">제품 보기</button></div>
+             <div class="sub_img"><img src="media/food/heart.jpg" width="100%" height="150px"><button id="sub_btn" type="button" class="btn btn-warning" onclick="productpage()">제품 보기</button></div>
+             <div class="sub_img"><img src="media/food/jang.jpg" width="100%" height="150px"><button id="sub_btn" type="button" class="btn btn-warning" onclick="productpage()">제품 보기</button></div>
+        </section>
+
+        <section class="sub_center">
+            <div class="sub_up">
+                <h2 style="font-family: BMHANNAAir;">고객센터</h2>
+                <h2 style="font-family: BMHANNAAir;">02-300-1234</h2>
+                <h5>상담시간: 평일10:00 ~ 17:00 (점심시간 12:00 ~ 14:00)</h5>
+                <p>상담직원들에게 폭언 욕설을 삼가해주시기 바랍니다</p>
+            </div>
+
+            <div class="sub_down">
+                <h2>인공지능 강아지 품종 확인</h2>
+                <h5>AI가 강아지의 품종을 확인합니다</h5>
+                <a href="dog_face.html"><button id="sub_btn" type="button" class="btn btn-outline-secondary">품종확인</button></a>
+            </div>
+        </section>
+    </div>
+    <!-- <div class="hr">&nbsp;</div> -->
+
+    <div class="sec_slid">
+        <div id="slider">
+            <div class="slider_item"><img src="media/slid/1.png"></div>
+            <div class="slider_item"><img src="media/slid/2.png"></div>
+            <div class="slider_item"><img src="media/slid/3.png"></div>
+            <div class="slider_item"><img src="media/slid/4.png"></div>
+            <div class="slider_item"><img src="media/slid/5.png"></div>
+            <div class="slider_item"><img src="media/slid/6.png"></div>
+        </div>
+    </div>
+    <script>
+        const showing_class = "showing";
+        const firstslide = document.querySelector(".slider_item:first-child");
+        
+        function slide() {
+            const currentSlide = document.querySelector(`.${showing_class}`);
+            if(currentSlide){
+                currentSlide.classList.remove(showing_class);
+                const nextSlide = currentSlide.nextElementSibling;
+                if(nextSlide){
+                    nextSlide.classList.add(showing_class);
+                } else {
+                    firstslide.classList.add(showing_class);
+                }
+            } else {
+                firstslide.classList.add(showing_class);
+            }
+        }
+        slide();
+        setInterval(slide, 3000);
+
+    </script>
+
+
+    <div class="wrapper">
+        <h2>이젠 쉬워요</h2>
+        <div>
+            <ul>
+                <li class="surveylist">
+                    <em>01</em>
+                    <h3>건강설문</h3>
+                    <p>
+                        딱 3분! 간단하게 체크하고
+                        <br>
+                        애완동물에게 딱맞는 간식 찾기
+                    </p>
+                </li>
+                <li class="sendfree">
+                    <em>02</em>
+                    <h3>설문하고</h3>
+                    <p>
+                        지금 주문하면
+                        <br>
+                        배송비 무료 이벤트!
+                    </p>
+                </li>
+                <li class="udogcare">
+                    <em>03</em>
+                    <h3>건강관리</h3>
+                    <p>
+                        애완동물의 행복
+                        <br>
+                        유독과 함께하세요.
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="wrapper3">
+        <div>
+            <img  id="dogimg" src="media/dogback1.jpg" >
+            <p id="exp3">U Dog 최고 연구진들이 연구결과를 기반으로 최상의 애완동물 간식을 제공합니다.</p>
+        </div>
+    </div>
+    <div class="wrapper2">
+        <div>
+            <h2>설문으로
+            <br>
+                딱 맞는 간식을 찾으세요.
+            </h2>
+            <a href="survey.html"><button id="survey_btn" type="button" class="btn btn-outline-secondary">지금시작하기</button></a>
+        </div>
+    </div>
+    <div class="wrapper4">
+        <h2>U DOG은 이렇다</h2>
+        <div>
+            <ul>
+                <li class="img01">
+                    <em>01</em>
+                    <h3>U DOG</h3>
+                    <p>
+                        "유독, 많은 것 가운데 홀로 두드러지게"
+                        <br>
+                        저희는 수많은 식품중 반려동물을 위한
+                        <br>
+                        최적의 상품을 찾아 추천해드립니다.
+                    </p>
+                </li>
+                <li class="img02">
+                    <em>02</em>
+                    <h3>The Very Best Thing</h3>
+                    <p>
+                        아무 것이나 주지 않고 맞춤형
+                        <br>
+                        간단한 설문을 통해 우리 반려견에게
+                        <br>
+                        최상의 간식을 제공합니다.
+                    </p>
+                </li>
+                <li class="img03">
+                    <em>03</em>
+                    <h3>Top Choice</h3>
+                    <p>
+                        최선보단 최상을
+                        <br>
+                        소비자들에게 최고의 선택을 위해
+                        <br>
+                        끝없이 연구합니다.
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="footer">
+        <section>
+            이용약관
+            개인정보처리방침
+            고객센터
+        </section>
+        <hr>
+        <section>
+            <div class="footer_l" id="footer_l">
+                U Dog <br>
+                (주)뜨거운치킨 ㅣ 사업자번호: 0925-1222 ㅣ 대표: 한규범, 윤성식<br>
+                개인정보취급담당자: 윤민혁<br>
+                서울특별시 거북골로34 명지대학교 본관 3층 307호<br>
+            </div>
+            <div class="footer_r" id="footer_r">
+                고객센터<br>
+                고객문의: be_man@naver.com ㅣ 전화: 010-4028-6210 <br>
+                상담시간: 평일10:00 ~ 17:00 (점심시간 12:00 ~ 14:00) <br>
+                제휴문의: sgsk88@nate.com ㅣ 전화: 010-3762-3739 <br>
+            </div>
+        </section>
+    </div>
+
+</body>
+</html>

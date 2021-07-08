@@ -1,0 +1,360 @@
+html, body{
+    padding: 0%;
+    margin: 0%;
+    width: 100%;
+    height: 100%;
+}
+@font-face {
+    font-family: "BMHANNAAir";
+    src: url(font/BMDOHYEON_ttf.ttf);
+}
+@media only screen and (max-width: 980px) {
+    #labelcheckbox{
+        width : 35px;
+        height: 35px;
+    }
+    }
+    
+
+.header{
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 5%;
+    height: 15%;
+}
+.navbar>li>a:hover{
+    color : gold;
+}
+.header-l{
+    float: left;
+    width: 20%;
+}
+.logo{
+    width:100%;
+    height: 100%;
+}
+.header-l>a>img{
+    width: 150px;
+    height: 150px;
+}
+.header-r{
+    float: right;
+    height: 100%;
+    width: 80%;
+    padding-top: 25px;
+}
+.navbar{
+    float: right;
+}
+.navbar>li{
+    float: right;            
+    list-style: none;
+    margin-top: 10px;
+}
+.navbar a{
+    /* line-height: 50px; */
+    color:black;
+    padding: 0 25px 0 0;
+    /* display: block; */
+    text-decoration: none;
+}
+/* nav바 */
+.hr_checkbox{
+    display: none;
+    float: right;
+    margin-top: 28px;
+}
+@media only screen and (max-width: 1224px) {
+    html, body{
+    padding: 0%;
+    margin: 0%;
+    width: 100%;
+    height: 100%;
+    }
+    .header-r{
+        display: none;
+    }
+    .hr_checkbox{
+        display: inherit;
+    }
+    .logo{
+        width : 100%;
+        float : left;
+    }
+    #logoimg{
+        width : 150px;
+        height: 150px;
+    }
+}
+@media only screen and (max-width: 800px) {
+    #body{
+        width: 1000px;
+    }
+}
+@media only screen and (max-width: 374px) {
+    html, #body{
+        width: 375px !important;
+    }
+}
+input[id="menuicon"] {
+    display:none;
+}
+input[id="menuicon"] + label {
+    display:block;
+    margin:30px;
+    width:60px;
+    height:50px;
+    position:relative;
+    cursor:pointer;
+}
+input[id="menuicon"] + label span {
+    display:block;
+    position:absolute;
+    width:100%;
+    height:5px;
+    border-radius:30px;
+    background:#000;
+    transition:all .35s;
+}
+input[id="menuicon"] + label span:nth-child(1) {
+    top:0;
+}
+input[id="menuicon"] + label span:nth-child(2) {
+    top:50%;
+    transform:translateY(-50%);
+}
+input[id="menuicon"] + label span:nth-child(3) {
+    bottom:0;
+}
+input[id="menuicon"]:checked + label {
+    z-index:2;
+}
+input[id="menuicon"]:checked + label span {
+    background:#fff;
+}
+input[id="menuicon"]:checked + label span:nth-child(1) {
+    top:50%;
+    transform:translateY(-50%)rotate(45deg);
+}
+input[id="menuicon"]:checked + label span:nth-child(2) {
+    opacity:0;
+}
+input[id="menuicon"]:checked + label span:nth-child(3) {
+    bottom:50%;
+    transform:translateY(50%) rotate(-45deg);
+}
+div[class="sidebar"] {
+    width:300px;
+    height:100%;
+    background:#F9D142;
+    position:fixed;
+    top:0;
+    right:-300px;
+    z-index:1;
+    transition:all .35s;
+}
+input[id="menuicon"]:checked + label + div {
+    right:0;}
+.sidemenu>a{
+    color : white;
+    text-decoration: none;
+}
+.sidemenu{
+    width: 100%;
+    position: relative;
+    top:300px;
+    left: 100px;
+}
+
+
+
+
+ /* 전체박스 */
+.cart_main{
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+    height: auto;
+    position: relative;
+    border : 2px solid gold;
+    border-radius: 25px;
+    padding : 25px;
+    margin-top : -20px;
+    margin-bottom: 45px;
+}
+/* 가운데 박스 헤더부분 */
+.up{
+    width: 80%;
+}
+#up{
+    height: 100px;
+    width: 100%;
+}
+.up_ment{
+    float:left;
+    width: 70%;
+}
+.delte_btn{
+    width: 30%;
+    height: 100%;
+    float: right;
+}
+#img22{
+    float : right;
+}
+#btn2{
+    width : 100px;
+    height: 100px;
+    float : right;
+}
+
+
+
+/* 제품 안보이일때 */
+.btn{
+    width : 400px;
+    height: 50px;
+    border-radius: 25px;
+}
+#middle_ver1{
+    width: 100%;
+    height: auto;
+    margin-bottom: 100px;
+    text-align: center;
+    margin-top : 100px;
+}
+
+
+@media only screen and (max-width: 1220px) {
+    .cart_main{
+        width : 100%;
+        margin-left: 0%;
+    }
+    .buy_button{
+        width: 100%;
+    }
+    #buy_btn{
+        width: 100% !important;
+    }
+}
+
+
+
+/* middle 제품하나도 없을때와 제품생겼을 때 */
+/* 제품부분 */
+#middle_ver2{
+    width: 100%;
+    height: auto;
+    margin-bottom: 100px;
+    /* text-align: center; */
+    margin-top : 100px;
+}
+.cart_pro{
+    width: 100%;
+    height: 130px;
+    margin-bottom: 100px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid gold;
+}
+#delete_img{
+    float : left;
+    margin-top : 20px;
+}
+ul{
+    float : right;
+    width: 76%;
+    height: 100%;
+    margin-bottom: 10px;
+    padding-left: 0 !important;
+}
+li{
+    /* margin-top : 25px; */
+    list-style: none;
+}
+
+/* 제품명, 가격 */
+#proudct-list li:nth-child(1){
+    font-weight: 600;
+    font-size : 20px;
+}
+#proudct-list li:nth-child(2){
+    font-weight: 600;
+    font-size : 30px;
+    margin-right: 5px;
+    float : left;
+}
+#proudct-list li:nth-child(3){
+    font-weight: 600;
+    font-size : 30px;
+    float : left;
+}
+#proudct-list li:nth-child(4){
+    font-weight: 600;
+    font-size : 30px;
+    margin-left: 5px;
+
+    float : left;
+}
+#proudct-list li:nth-child(5){
+    font-weight: 600;
+    font-size : 30px;
+    float : right;
+}
+
+
+/* 
+.total1{
+    width: 100%;
+    height: 130px;
+} */
+.cart_price{
+    margin-top : 15px;
+    padding : 15px 0;
+}
+dt{
+    text-align: left;
+    float : left;
+    width: 50%;
+    font-size: 18px;
+    font-weight: 200;
+    box-sizing: border-box;
+}
+dd{
+    float : left;
+    text-align: right;
+    width : 50%;
+    font-size: 18px;
+    font-weight: 700;
+}
+.clearfix{
+    zoom: 1;
+}
+
+/* 푸터부분 */
+.foot{
+    width: 100%;
+    margin-top : 15px;
+    border-top : 3px solid orange;
+    padding-top: 20px;
+}
+
+#totalprice{
+    font-size : 22px;
+}
+#totalprice1{
+    font-size : 26px;
+    color : orange;
+}
+
+.buy_button{
+    margin-top: 70px;
+    text-align: center;
+}
+#buy_btn{
+    width : 328px;
+    /* line-height: 60px; */
+    border-radius: 30px;
+    font-size: 20px;
+    font-weight: 600;
+}
