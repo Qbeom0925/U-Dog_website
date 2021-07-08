@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="kor">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <title>설문 | U DOG</title>
+
+    <!-- <script src="jquery-3.6.0.js"></script> -->
+    <!-- <script src = "http://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
+
+    <link rel="stylesheet" href="JS/jquery-ui-1.12.1/jquery-ui.min.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="JS/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+    <script src="JS/jquery-ui-1.12.1/datepicker-ko.js"></script>
+    <script src="JS/survey.js"></script>
+
+    <link rel="stylesheet" href="css/survey.css">
+    
+</head>
+<body id="start" onload="start()" style="font-family: BMHANNAAir;">
+    <div class="logo">
+        <div class="contents">
+        <div class="survey">
+        <img src="media/logo.png" width="200px" height="200px">
+
+            <h3>당신의 반려동물의 건강상태를 체크합니다.</h3>
+            <h2>U Dog</h2>
+            <br>
+            <h3>몇 가지 질문에 답하고</h3>
+            <h4>딱 맞는 영양소를 추천해줍니다.</h4>
+            <br>
+            <button type="button" class="btn btn-warning" id="next1" style="width: 500px; height: 50px;" onclick="part1_change()">Next</button>
+        </div>
+        </div>
+
+        <div class="contents">
+        <div class="survey">
+            <img src="media/logo.png" width="200px" height="200px">
+            <h4>U Dog이 반려동물을 어떻게 부르면 좋을까요?</h4>
+            <h5>이름을 입력해주세요</h5>
+            <input type="text" id="dog_name" class="input"></input>
+            <br>
+            <button type="button" class="btn btn-warning" id="next2" style="width: 500px; height: 50px; margin-top: 25px;" onclick="part2_change()">Next</button>
+        </div>
+    </div>
+
+    <div class="contents">
+        <div class="survey">
+            <img src="media/logo.png" width="200px" height="200px">
+            <h2 class="name"></h2>
+            <input type="text" name="date" id="date3" class="input" size="12" />
+            <input type="button" id="birthday" value="달력" onclick="$('#date3').datepicker('show');" />
+            <br>
+            <button type="button" class="btn btn-warning" id="next3" style="width: 500px; height: 50px; margin-top: 25px;" onclick="part3_change()">Next</button>
+        </div>
+    </div>
+
+    <div class="contents">
+        <div class="survey">
+            <img src="media/logo.png" width="200px" height="200px">
+            <h2 class="weight"></h2>
+            <input type="text"  id="weight" class="input"></input>
+            <br>
+            <button type="button" class="btn btn-warning" id="next2" style="width: 500px; height: 50px; margin-top: 25px;" onclick="part4_change()">Next</button>
+        </div>
+    </div>
+
+    <div class="contents">
+        <div class="survey">
+            <img src="media/logo.png" width="200px" height="200px">
+            <h2 class="gender"></h2>
+            <h5>남, 여로 입력해주세요</h5>
+            <select name="gender" id="gender" class="input">
+                <option value="남자">남자</option>
+                <option value="여자">여자</option>
+            </select>
+            <br>
+            <button type="button" class="btn btn-warning" id="next2" style="width: 500px; height: 50px; margin-top: 25px;" onclick="part5_change()">Next</button>
+        </div>
+    </div>
+
+    <div class="contents">
+        <div class="survey">
+            <img src="media/logo.png" width="200px" height="200px">
+            <h2 class="kind"></h2>
+            <!-- <h5>이름을 입력해주세요</h5> -->
+            <select name="kind" id="kind" class="input">
+                <option value="강아지">강아지</option>
+                <option value="고양이">고양이</option>
+            </select>
+            <br>
+            <button type="button" class="btn btn-warning" id="next2" style="width: 500px; height: 50px; margin-top: 25px;" onclick="part6_change()">Next</button>
+        </div>
+    </div>
+
+    <div class="contents">
+        <div class="survey">
+            <img src="media/logo.png" width="200px" height="200px">
+            <h2 class="object"></h2>
+            <!-- <h5>이름을 입력해주세요</h5> -->
+            <input type="text"  id="object" class="input"></input>
+            <br>
+            <button type="button" class="btn btn-warning" id="next2" style="width: 500px; height: 50px; margin-top: 25px;" onclick="part7_change()">Next</button>
+        </div>
+    </div>
+        
+    <div class="contents">
+        <div class="survey">
+            <img src="media/logo.png" width="200px" height="200px">
+            <h2 class="neutralization"></h2>
+            <h5>예, 아니요로 입력해주세요.</h5>
+            <select name="kind" id="neutralization" class="input">
+                <option value="예">예</option>
+                <option value="아니요">아니요</option>
+            </select>
+            <br>
+            <button type="button" class="btn btn-warning" id="next2" style="width: 500px; height: 50px; margin-top: 25px;" onclick="part8_change()">Next</button>
+        </div>
+    </div>
+
+    <div class="contents">
+        <div class="survey">
+            <img src="media/logo.png" width="200px" height="200px">
+            <h2 class="prevention"></h2>
+            <h5>최근 3년 내에 예방접종을 한 것이 있다면 기입해주세요.</h5>
+            <input type="text"  id="prevention" class="input"></input>
+            <br>
+            <button type="button" class="btn btn-warning" id="next2" style="width: 500px; height: 50px; margin-top: 25px;" onclick="part9_change()">Next</button>
+        </div>
+    </div>
+
+    <div class="contents">
+        <div class="survey">
+            <img src="media/logo.png" width="200px" height="200px">
+            <h2 class="num"></h2>
+            <h5>없으면 입력하지 않아도 됩니다.</h5>
+            <input type="text"  id="num" class="input"></input>
+            <br>
+            <button type="button" class="btn btn-warning" id="next2" style="width: 500px; height: 50px; margin-top: 25px;" onclick="part10_change()">Next</button>
+        </div>
+    </div>
+
+    <div class="contents">
+        <div class="survey">
+            <img src="media/logo.png" width="200px" height="200px">
+            <h2 class="disease"></h2>
+                <fieldset>
+                    <legend>병적사항</legend>
+                    <label>관절&뼈<input id="disease" type="checkbox" name="disease" class="Disease" value="born"/></label>
+                    <label>피부&모질 <input id="disease" type="checkbox" name="disease" class="Disease" value="skin"/></label>
+                    <label>장&소화 <input id="disease" type="checkbox" name="disease" class="Disease" value="jang"/></label>
+                    <label>눈&귀 <input id="disease" type="checkbox" name="disease" class="Disease" value="eye"/></label>
+                    <label>구강 <input id="disease" type="checkbox" name="disease" class="Disease" value="mouth"/></label>
+                    <label>심장 <input id="disease" type="checkbox" name="disease" class="Disease" value="heart"/></label>
+                </fieldset>
+            <br>
+            <button type="button" class="btn btn-warning" id="next2" style="width: 500px; height: 50px; margin-top: 25px;" onclick="part11_change()">Next</button>
+        </div>
+    </div>    
+    
+    <div class="contents">
+        <div class="survey">
+            <img src="media/logo.png" width="200px" height="200px">
+            <h2 class="allergy"></h2>
+            <h5>없으면 입력하지 않아도 됩니다.</h5>
+            <input type="text"  id="allergy" class="input"></input>
+            <br>
+            <button type="button" class="btn btn-warning" id="next2" style="width: 500px; height: 50px; margin-top: 25px;" onclick="part12_change()">Next</button>
+        </div>
+    </div>
+    
+    <div class="contents">
+        <div class="survey">
+            <img src="media/logo.png" width="200px" height="200px">
+            <h2 class="meal"></h2>
+            <!-- <h5></h5> -->
+            <!-- <input type="text"  id="meal"></input> -->
+            <select name="meal" id="meal" class="input">
+                <option value="1">1번</option>
+                <option value="2">2번</option>
+                <option value="3">3번</option>
+                <option value="4">4번</option>
+                <option value="5">5번이상</option>
+            </select>
+            <br>
+            <button type="button" class="btn btn-warning" id="next2" style="width: 500px; height: 50px; margin-top: 25px;" onclick="part13_change()">Next</button>
+        </div>
+    </div>
+
+    <div class="contents">
+        <div class="survey">
+            <img src="media/logo.png" width="200px" height="200px">
+            <h2 class="pee"></h2>
+            <!-- <h5></h5> -->
+            <!-- <input type="text"  id="meal"></input> -->
+            <select name="pee" id="pee" class="input">
+                <option value="1">1번</option>
+                <option value="2">2번</option>
+                <option value="3">3번</option>
+                <option value="4">4번</option>
+                <option value="5">5번</option>
+                <option value="6">6번</option>
+                <option value="7">7번</option>
+                <option value="8">8번</option>
+                <option value="9">9번이상</option>
+            </select>
+            <br>
+            <button type="button" class="btn btn-warning" id="next2" style="width: 500px; height: 50px; margin-top: 25px;" onclick="part14_change()">Next</button>
+        </div>
+    </div> 
+
+    <div class="contents">
+        <div class="survey">
+            <img src="media/logo.png" width="200px" height="200px">
+            <h2 class="poop"></h2>
+            <!-- <h5></h5> -->
+            <!-- <input type="text"  id="meal"></input> -->
+            <select name="poop" id="poop" class="input">
+                <option value="1">1번</option>
+                <option value="2">2번</option>
+                <option value="3">3번</option>
+                <option value="4">4번</option>
+                <option value="5">5번이상</option>
+            </select>
+            <br>
+            <button type="button" class="btn btn-warning" id="next2" style="width: 500px; height: 50px; margin-top: 25px;" onclick="part15_change()">Next</button>
+        </div>
+    </div>
+
+    <div class="contents">
+        <div class="survey">
+            <img src="media/logo.png" width="200px" height="200px">
+            <h2>설문이 완료되었습니다</h2>
+            <h4>최상의 간식을 제공 받으시겠습니까?</h4>
+            <div class="end"></div>
+            <div class="end"></div>
+            <br>
+            <button type="button" class="btn btn-warning" id="next2" style="width: 500px; height: 50px; margin-top: 25px;" onclick="part16_change()">Next</button>
+        </div>
+    </div>
+
+    <div class="contents">
+        <div class="survey">
+            <div class="end"></div>
+            <br>
+            <div id="food">
+            </div>
+            <br>
+            <button type="button" class="btn btn-warning" id="next2" style="width: 600px; height: 50px; margin-top: 25px;" onclick="product_change()">제품 보러가기</button>
+        </div>
+    </div>
+    
+    <!-- <button type='button' onclick='eye_add()' class='btn btn-warning'>제품 보러가기</button> -->
+
+
+    </div>
+
+    </div>
+</body>
+</html>

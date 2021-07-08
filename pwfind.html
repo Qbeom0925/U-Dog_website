@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>비밀번호찾기 | U DOG</title>
+</head>
+<link rel="stylesheet" href="css/login.css">
+<body>
+    <div id="login-view">
+        <div>
+            <div class="login-view-inner">
+                <h1>U DOG</h1>
+                <form id="login-form" action="pwfound.php" method="post">
+                    <fieldset class = "udog-login">
+                        <input type="text" id="loginid" name="id" maxlength="10" oninput="numbermaxlength(this, 3)" class="id inputtext" placeholder="아이디를 입력하세요."><br>
+                        <input type="text" id="loginpw" name="phone" minlength="4" maxlength="13" class="password inputtext" placeholder="전화번호를 입력하세요."> 
+                        <br>
+                        <br>
+                        <input type="submit" id="input" class=loginbt onclick="login()" value="비밀번호 찾기">
+                        <nav id="found">
+                            <a href="sign.html">회원가입</a>
+                        </nav>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

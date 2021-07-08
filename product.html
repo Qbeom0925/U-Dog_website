@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <title>제품보기 | U DOG</title>
+</head>
+<link rel="stylesheet" href="css/product.css">
+<script src="JS/pruduct.js"></script>
+
+<body onload="get_value(), Change_display()">
+    <div id="app">
+        <div class="header" style="font-family: BMHANNAAir;">
+            <section class="header-l">
+                <a class="logo" href="index.html"><img id="logoimg" src="media/logo.png"></a>
+            </section>
+            <section class="header-r">
+                <nav class = "navbar">
+                    <li><a href="index.html">메인페이지</a></li>
+                    <li><a href="survey.html">추천상품</a></li>
+                    <li><a href="cart.html">장바구니</a></li>
+                    <li><a href="product.html">제품보기</a></li>
+                    <li><a href="login.html">로그인</a></li>
+                </nav>
+            </section>
+            <div class="hr_checkbox">
+                <input type="checkbox" id="menuicon">
+                <label id="labelcheckbox" for="menuicon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+                    <div class="sidebar">
+                        <nav class="sidemenu">
+                            <a href="index.html">메인페이지</a><br>
+                            <a href="survey.html">추천상품</a><br>
+                            <a href="cart.html">장바구니</a><br>
+                            <a href="product.html">제품보기</a><br>
+                            <a href="login.html">로그인</a><br>
+                        </nav>
+                </div>
+            </div>
+        </div>
+        <div class="header-contents">
+            <div class="exp">
+                <h1>우리 반려동물을 위한
+                <br>
+                    유독의 연구와 도전은 계속됩니다.
+                </h1>
+            </div>
+        </div>
+        <main id="main">
+            <div class="wrapper">
+                <section class="product">
+                    <ul id="product-list" class="product-item">
+                        <li>
+                            <div id="href" class="a-info">
+                                <div id="img" style="background-color: #e9faff; background-image: url(media/food/eye.jpg);">
+                                    <div class="pd-header">
+                                        <h2>
+                                            <em>눈 건강을 위한</em>
+                                            eye조아 육포
+                                        </h2>
+                                    </div>
+                                    <div class="contents">
+                                        <ul>
+                                            <li>강아지들의 눈건강</li>
+                                            <li>눈 건조 증상 감소</li>
+                                            <li>+ 영양분까지 포함</li>
+                                        </ul>
+                                        <div>
+                                            <span>30일분</span>
+                                            <br>
+                                            <p>12,500원</p>
+                                        </div>
+                                    </div>
+                                    <div class="footer">
+                                        <div class="btn-wrap">
+                                            <button" id="button" class="btn btn-outline-secondary" onclick="eye_add()">+ 장바구니 담기</button>
+                                                <script type="text/javascript">
+                                                    function eye_add() {
+                                                        localStorage["cart0"] = "eye";
+                                                        localStorage["cart_eye_cnt"] = 1;
+                                                        alert("장바구니 담기 완료");
+                                                        window.location.reload();
+                                                    }
+                                                </script>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div id="href" class="a-info">
+                                <div id="img" style="background-color: #e0b5bb; background-image: url(media/food/jang.jpg);">
+                                    <div class="pd-header">
+                                        <h2>
+                                            <em>장 건강을 위한</em>
+                                            국산 강아지 소세지
+                                        </h2>
+                                    </div>
+                                    <div class="contents">
+                                        <ul>
+                                            <li>변비 증상 개선</li>
+                                            <li>복통 개선</li>
+                                            <li>부담 없는 간식 소세지</li>
+                                        </ul>
+                                        <div>
+                                            <span>30일분</span>
+                                            <br>
+                                            <p>14,500원</p>
+                                        </div>
+                                    </div>
+                                    <div class="footer">
+                                        <div class="btn-wrap">
+                                            <button type="button" id="button" class="btn btn-outline-secondary" onclick="jang_add()">+ 장바구니 담기</button>
+                                            <script type="text/javascript">
+                                                function jang_add() {
+                                                    localStorage["cart1"] = "jang";
+                                                    localStorage["cart_jang_cnt"] = 1;
+                                                    alert("장바구니 담기 완료");
+                                                    window.location.reload();
+                                                }
+                                            </script>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div id="href" class="a-info">
+                                <div id="img" style="background-color: #efe9d9; background-image: url(media/food/born.jpg);">
+                                    <div class="pd-header">
+                                        <h2>
+                                            <em>관절 튼튼 근육 튼튼</em>
+                                            부드러운 소고기
+                                        </h2>
+                                    </div>
+                                    <div class="contents">
+                                        <ul>
+                                            <li>관절 개선</li>
+                                            <li>근육 증가</li>
+                                            <li>영양공급</li>
+                                        </ul>
+                                        <div>
+                                            <span>30일분</span>
+                                            <br>
+                                            <p>16,500원</p>
+                                        </div>
+                                    </div>
+                                    <div class="footer">
+                                        <div class="btn-wrap">
+                                            <button type="button" id="button" class="btn btn-outline-secondary"onclick="born_add()">+ 장바구니 담기</button>
+                                            <script type="text/javascript">
+                                                function born_add() {
+                                                    localStorage["cart2"] = "born";
+                                                    localStorage["cart_born_cnt"] = 1;
+                                                    alert("장바구니 담기 완료");
+                                                    window.location.reload();
+                                                }
+                                            </script>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div id="href" class="a-info">
+                                <div id="img" style="background-color: #b1d9f2; background-image: url(media/food/tooth.jpg);">
+                                    <div class="pd-header">
+                                        <h2>
+                                            <em>치아 건강을 위한</em>
+                                            일석이조 강아지껌
+                                        </h2>
+                                    </div>
+                                    <div class="contents">
+                                        <ul>
+                                            <li>입냄새 제거</li>
+                                            <li>치석 제거</li>
+                                            <li>종합적인 구강관리</li>
+                                        </ul>
+                                        <div>
+                                            <span>30일분</span>
+                                            <br>
+                                            <p>16,500원</p>
+                                        </div>
+                                    </div>
+                                    <div class="footer">
+                                        <div class="btn-wrap">
+                                            <button type="button" id="button" class="btn btn-outline-secondary" onclick="tooth_add()">+ 장바구니 담기</button>
+                                            <script type="text/javascript">
+                                                function tooth_add() {
+                                                    localStorage["cart3"] = "tooth";
+                                                    localStorage["cart_tooth_cnt"] = 1;
+                                                    alert("장바구니 담기 완료");
+                                                    window.location.reload();
+                                                }
+                                            </script>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div id="href" class="a-info">
+                                <div id="img" style="background-color: #eae9e9; background-image: url(media/food/skin.jpg);">
+                                    <div class="pd-header">
+                                        <h2>
+                                            <em>피부 증상 완화</em>
+                                            뽀송이 치킨
+                                        </h2>
+                                    </div>
+                                    <div class="contents">
+                                        <ul>
+                                            <li>피부보습/피부건강</li>
+                                            <li>피부염 개선</li>
+                                            <li>알러지 개선</li>
+                                        </ul>
+                                        <div>
+                                            <span>30일분</span>
+                                            <br>
+                                            <p>17,500원</p>
+                                        </div>
+                                    </div>
+                                    <div class="footer">
+                                        <div class="btn-wrap">
+                                            <button type="button" id="button" class="btn btn-outline-secondary" onclick="skin_add()">+ 장바구니 담기</button>
+                                            <script type="text/javascript">
+                                                function skin_add() {
+                                                    localStorage["cart4"] = "skin";
+                                                    localStorage["cart_skin_cnt"] = 1;
+                                                    alert("장바구니 담기 완료");
+                                                    window.location.reload();
+                                                }
+                                            </script>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div id="href" class="a-info">
+                                <div id="img" style="background-color: #afe19f; background-image: url(media/food/heart.jpg);">
+                                    <div class="pd-header">
+                                        <h2>
+                                            <em>심장 기능 개선</em>
+                                            영양 공급 육포
+                                        </h2>
+                                    </div>
+                                    <div class="contents">
+                                        <ul>
+                                            <li>면역력 개선</li>
+                                            <li>심장병 완화</li>
+                                            <li>스트레스 완화</li>
+                                        </ul>
+                                        <div>
+                                            <span>30일분</span>
+                                            <br>
+                                            <p>19,500원</p>
+                                        </div>
+                                    </div>
+                                    <div class="footer">
+                                        <div class="btn-wrap">
+                                            <button type="button" id="button" class="btn btn-outline-secondary" onclick="heart_add()">+ 장바구니 담기</button>
+                                            <script type="text/javascript">
+                                                function heart_add() {
+                                                    localStorage["cart5"] = "heart";
+                                                    localStorage["cart_heart_cnt"] = 1;
+                                                    alert("장바구니 담기 완료");
+                                                    window.location.reload();
+                                                }
+                                            </script>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div id="href" class="a-info">
+                                <div id="img" style="background-color: #ffefa7; background-image: url(media/food/standard.png);">
+                                    <div class="pd-header">
+                                        <h2>
+                                            <em>영양공급 기초간식</em>
+                                            스틱형 육포
+                                        </h2>
+                                    </div>
+                                    <div class="contents">
+                                        <ul>
+                                            <li>언제든지 편리하고</li>
+                                            <li>무향의 스틱형 육포</li>
+                                            <li>수제간식</li>
+                                        </ul>
+                                        <div>
+                                            <span>30일분</span>
+                                            <br>
+                                            <p>19,500원</p>
+                                        </div>
+                                    </div>
+                                    <div class="footer">
+                                        <div class="btn-wrap">
+                                            <button type="button" id="button" class="btn btn-outline-secondary" onclick="standard_add()">+ 장바구니 담기</button>
+                                            <script type="text/javascript">
+                                                function standard_add() {
+                                                    localStorage["cart6"] = "standard";
+                                                    localStorage["cart_standard_cnt"] = 1;
+                                                    alert("장바구니 담기 완료");
+                                                    window.location.reload();
+                                                }
+                                            </script>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div id="href" class="a-info">
+                                <div id="img" style="background-color: #cbc5e8; background-image: url(media/food/standard2.jpg);">
+                                    <div class="pd-header">
+                                        <h2>
+                                            <em>수제간식</em>
+                                            단호박+육포
+                                        </h2>
+                                    </div>
+                                    <div class="contents">
+                                        <ul>
+                                            <li>분리불안해소</li>
+                                            <li>식욕증진</li>
+                                            <li>소화증상 개선</li>
+                                        </ul>
+                                        <div>
+                                            <span>30일분</span>
+                                            <br>
+                                            <p>19,500원</p>
+                                        </div>
+                                    </div>
+                                    <div class="footer">
+                                        <div class="btn-wrap">
+                                            <button type="button" id="button" class="btn btn-outline-secondary" onclick="standard2_add()">+ 장바구니 담기</button>
+                                            <script type="text/javascript">
+                                                function standard2_add() {
+                                                    localStorage["cart7"] = "standard2";
+                                                    localStorage["cart_standard2_cnt"] = 1;
+                                                    alert("장바구니 담기 완료");
+                                                    window.location.reload();
+                                                }
+                                            </script>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

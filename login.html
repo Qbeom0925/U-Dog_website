@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인 | U DOG</title>
+</head>
+<link rel="stylesheet" href="css/login.css">
+<script src="js/login.js"></script>
+
+<body>
+    <div id="login-view">
+        <div>
+            <div class="login-view-inner">
+                <h1>U DOG</h1>
+                <form id="login-form" action="loginok.php" method="post">
+                    <fieldset class = "udog-login">
+                        <input type="text" id="loginid" name="id" maxlength="10" oninput="numbermaxlength(this, 3)" class="id inputtext" placeholder="ID"><br>
+                        <input type="password" id="loginpw" name="pw" minlength="4" maxlength="13" class="password inputtext" placeholder="PASSWORD"> 
+                        <br>
+                        <br>
+                        <input type="submit" id="input" class=loginbt onclick="login()" value="LOGIN">
+                        <nav id="found">
+                            <a href="pwfind.html">비밀번호 찾기</a>
+                            <span>|</span>
+                            <a href="sign.html">회원가입</a>
+                        </nav>
+                    </fieldset>
+                    <fieldset class="kakao-login">
+                        <button class="btn btn-kakao-login" id="btn2">
+                            <div>
+                                <span class="icon icon-kakao"></span>
+                                KAKAO LOGIN
+                            </div>
+                        </button>
+                        <button class="btn btn-facebook-login" id="btn2">
+                            <div>
+                                <span class="icon icon-kakao"></span>
+                                FACEBOOK LOGIN
+                            </div>
+                        </button>
+                        <button class="btn btn-naver-login" id="btn2">
+                            <div>
+                                <span class="icon icon-naver"></span>
+                                NAVER LOGIN
+                            </div>
+                        </button>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

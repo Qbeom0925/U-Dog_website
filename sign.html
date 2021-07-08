@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입 | U DOG</title>
+</head>
+<link rel="stylesheet" href="css/sign.css">
+<script src="JS/sign.js"></script>
+
+<body>
+    <div class="header" style="font-family: BMHANNAAir;">
+        <section class="header-l">
+            <a  class="logo" href="index.html"><img id="logoimg" src="media/logo.png"></a>
+        </section>
+        <section class="header-r">
+            <nav class = "navbar">
+                <li><a href="login.html">로그인</a></li>
+                <li><a href="product.html">제품보기</a></li>
+                <li><a href="cart.html">장바구니</a></li>
+                <li><a href="survey.html">추천상품</a></li>
+                <li><a href="index.html">메인페이지</a></li>
+            </nav>
+        </section>
+        <div class="hr_checkbox">
+            <input type="checkbox" id="menuicon">
+            <label id="labelcheckbox" for="menuicon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+                <div class="sidebar">
+                    <nav class="sidemenu">
+                        <a href="index.html">메인페이지</a><br>
+                        <a href="survey.html">추천상품</a><br>
+                        <a href="cart.html">장바구니</a><br>
+                        <a href="product.html">제품보기</a><br>
+                        <a href="login.html">로그인</a><br>
+                    </nav>
+            </div>
+        </div>
+    </div>
+    <section id=sign-view>
+        <div>
+            <form id="sign-form" action="insert.php" method="post">
+                <!-- 이름, 연락처부분 -->
+                <fieldset class="userif">
+                    <h2 class="title">회원가입</h2>
+                    <div>
+                        <div class="input-label">
+                            <label>이름</label>
+                            <input type="text" id="name" name="name" class="input-text" placeholder="이름을 입력하세요.">
+                        </div>
+                        <div class="input-label">
+                            <label>연락처</label>
+                            <div class="left">
+                                <input type="tel" id="tell" name="phone" class="input-text left-auto"placeholder="연락처('-'제외)를 입력해 주세요. ex) 01012345678"> 
+                                <button id="call" class="btn" onclick="return numberadmin()">인증번호 발송</button>
+                            </div>
+                        </div>
+                        <div class="left">
+                            <input id="admin" type="tel" disabled class="input-text disabled" placeholder="인증번호를 입력해 주세요.">
+                            <button id="adminbtn" class="btn" onclick="return a()">확인</button>
+                        </div>
+                    </div>
+                </fieldset>
+                <br>
+                <br>
+                <!-- 아이디 비밀번호 부분 -->
+                <fieldset class="joinif">
+                    <div class="input-label">
+                        <label>아이디(이메일)</label>
+                        <input type="text" id="loginid" name="id" class="input-text" placeholder="아이디(이메일)을 입력해 주세요.">
+                    </div>
+                    <div class="input-label">
+                        <label>비밀번호</label>
+                        <input type="password" id="loginpw" name="pw" class="input-text" placeholder="비밀번호를 입력해 주세요.">
+                    </div>
+                    <div class="input-label">
+                        <label>비밀번호 확인</label>
+                        <input type="password" id="confirmpw" class="input-text" placeholder="비밀번호를 다시 입력해 주세요.">
+                    </div>
+                    <div class="all-check">
+                        <lable class="label-check pullleft">
+                            <input id="checkall" type="checkbox" onclick="check_all()" value="1" class="input-check" data-parsley-multiple="checkall">
+                            <span>모두 동의하기</span>
+                        </lable>
+                    </div>
+                </fieldset>
+                <fieldset class="joincheck">
+                    <div class="checkview">
+                        <label class="label-check label-check1">
+                            <input id="checkadult" type="checkbox" name="checkbox" value="1" class="input-check">
+                            <span id="exp">만 14세 이상입니다.</span> 
+                        </label>
+                    </div>
+                    <div class="checkview">
+                        <label class="label-check label-check1">
+                            <input id="checkadult" type="checkbox" name="checkbox" value="1" class="input-check">
+                            <span id="exp">이용 약관 동의</span>
+                        </label> 
+                    </div>
+                    <div class="checkview">
+                        <label class="label-check label-check1">
+                            <input id="checkadult" type="checkbox" name="checkbox" value="1" class="input-check">
+                            <span id="exp">개인정보처리방침 동의</span> 
+                        </label>
+                    </div>
+                    <div class="checkview">
+                        <label class="label-check label-check1">
+                        <input id="checkadult" type="checkbox" name="checkbox"value="1" class="input-check">
+                            <span id="exp">마케팅 수신 동의</span>
+                            <span class="gray" style="display : inline-block; margin-left:6px">(선택)</span> 
+                        </label>
+                    </div>
+                </fieldset>
+                <br>
+                <br>
+                <div class="login-center">
+                    <input type="submit" value="회원가입" class="btn1 btn-join" onclick="return check()"></input>
+                    <fieldset class="sns">
+                        <button class="btn2 btn-kakao-login" id="btn2">
+                            <div>
+                                <span class="icon icon-kakao"></span>
+                                KAKAO 회원가입
+                            </div>
+                        </button>
+                        <button class="btn2 btn-facebook-login" id="btn2">
+                            <div>
+                                <span class="icon icon-kakao"></span>
+                                FACEBOOK 회원가입
+                            </div>
+                        </button>
+                        <button class="btn2 btn-naver-login" id="btn2">
+                            <div>
+                                <span class="icon icon-naver"></span>
+                                NAVER 회원가입
+                            </div>
+                        </button>
+                    </fieldset>
+                </div>
+            </form>
+        </div>
+    </section>
+</body>
+</html>
